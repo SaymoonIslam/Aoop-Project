@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.CPlusPractice">
+   <children>
+      <AnchorPane fx:id="BasicHome" focusTraversable="true" layoutX="275.0" layoutY="170.0" prefHeight="760.0" prefWidth="800.0" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="38.0" layoutY="59.0" prefHeight="641.0" prefWidth="198.0" styleClass="anchor-pane">
+               <children>
+                  <Button fx:id="BasicArr" layoutX="42.0" layoutY="225.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Array">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BasicFun" layoutX="42.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Function">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BasicStr" layoutX="42.0" layoutY="327.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="String">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane layoutX="304.0" layoutY="50.0" prefHeight="54.0" prefWidth="243.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="76.0" layoutY="13.0" text="C Plus" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_plus-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="289.0" layoutY="193.0" prefHeight="28.0" prefWidth="510.0" text="1. Write a program in C++ to print welcome text on a separate line." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="217.0" prefHeight="61.0" prefWidth="523.0" text="2. Write a program in C++ to print the sum of two numbers.Sample Output:Print the sum of two numbers :" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="279.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="301.0" prefHeight="36.0" prefWidth="198.0" text="The sum of 29 and 30 is : 59" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="337.0" prefHeight="61.0" prefWidth="523.0" text="3. Write a C++ program that displays mixed data types and arithmetic operations.Sample output:Display arithmetic operations with mixed data type :" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="399.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="421.0" prefHeight="36.0" prefWidth="198.0" text="5 + 7 = 12" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="457.0" prefHeight="22.0" prefWidth="198.0" text="3.7 * 8.0 = 29.6" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="477.0" prefHeight="61.0" prefWidth="523.0" text=" 4. Write a C++ program to add two numbers and accept them from the keyboard.Sample Output:" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="539.0" prefHeight="22.0" prefWidth="198.0" text="Input 1st number : 25" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="561.0" prefHeight="22.0" prefWidth="198.0" text="Input 2nd number : 39" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="282.0" layoutY="583.0" prefHeight="61.0" prefWidth="523.0" text=" 5. Write a program in C++ to convert temperature in Celsius to Kelvin.Sample Output:" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="639.0" prefHeight="22.0" prefWidth="276.0" text="Input the temperature in Celsius : 26.85" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="CPlusBackBtn" layoutX="658.0" layoutY="689.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="&lt;&lt;Back" />
+            <Button fx:id="CPlusNrxtBtn" layoutX="766.0" layoutY="689.0" mnemonicParsing="false" onAction="#swiping" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="Next&gt;&gt;" />
+            <Label layoutX="294.0" layoutY="148.0" prefHeight="22.0" prefWidth="187.0" text="C++ Basic Problems:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="BasicPageOne" layoutX="10.0" layoutY="10.0" prefHeight="770.0" prefWidth="899.0" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="38.0" layoutY="59.0" prefHeight="641.0" prefWidth="198.0" styleClass="anchor-pane">
+               <children>
+                  <Button fx:id="BasicArr1" layoutX="42.0" layoutY="238.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Array">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Basicfun1" layoutX="42.0" layoutY="282.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Function">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Basic-fun1" layoutX="42.0" layoutY="329.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="String">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BasicBasic" layoutX="42.0" layoutY="191.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Basic">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="304.0" layoutY="50.0" prefHeight="54.0" prefWidth="243.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="76.0" layoutY="13.0" text="C Plus" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_plus-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="286.0" layoutY="154.0" prefHeight="54.0" prefWidth="530.0" text="6.Write a C++ program to check if a given positive number is a multiple of 3 or a multiple of 7." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="208.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="230.0" prefHeight="36.0" prefWidth="198.0" text="Input: 3 14 12 37" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="288.0" prefHeight="71.0" prefWidth="549.0" text="7.Write a C++ program to create a string taking the first 3 characters of a given string. Then, return the string with the 3 characters added to both the front and back. If the given string length is less than 3, use whatever characters are there." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="360.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="382.0" prefHeight="36.0" prefWidth="198.0" text="Input: &quot;Python&quot;  &quot;JS&quot;  &quot;Code&quot;" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="418.0" prefHeight="28.0" prefWidth="364.0" text="Output: PytPythonPyt   JSJSJS   CodCodeCod" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="438.0" prefHeight="61.0" prefWidth="523.0" text=" 8. Write a C++ program to add two numbers and accept them from the keyboard.Sample Output:" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="500.0" prefHeight="22.0" prefWidth="198.0" text="Input 1st number : 25" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="522.0" prefHeight="22.0" prefWidth="198.0" text="Input 2nd number : 39" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="544.0" prefHeight="61.0" prefWidth="523.0" text="9.Write a C++ program to check if one given temperature is less than 0 and the other is greater than 100." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="280.0" layoutY="600.0" prefHeight="22.0" prefWidth="276.0" text="Input: 120, -1" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="CPlusBasicBackBtn1" layoutX="658.0" layoutY="689.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="&lt;&lt;Back" />
+            <Button fx:id="CPlusBasicNrxtBtn1" layoutX="766.0" layoutY="689.0" mnemonicParsing="false" onAction="#swiping" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="Next&gt;&gt;" />
+            <Label layoutX="291.0" layoutY="126.0" prefHeight="22.0" prefWidth="187.0" text="C++ Basic Problems:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="260.0" prefHeight="28.0" prefWidth="198.0" text="OutPut: 1 1 1 0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="280.0" layoutY="622.0" prefHeight="22.0" prefWidth="276.0" text="Output: 1" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Array" layoutX="10.0" layoutY="10.0" prefHeight="780.4" prefWidth="909.2" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="38.0" layoutY="59.0" prefHeight="641.0" prefWidth="198.0" styleClass="anchor-pane">
+               <children>
+                  <Button fx:id="ArrayArray" layoutX="42.0" layoutY="234.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Array">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ArrayFun" layoutX="42.0" layoutY="286.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Function">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ArrayStr" layoutX="42.0" layoutY="335.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="String">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ArrayBasic" layoutX="42.0" layoutY="188.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Basic">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="304.0" layoutY="50.0" prefHeight="54.0" prefWidth="243.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="76.0" layoutY="13.0" text="C Plus" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_plus-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="286.0" layoutY="154.0" prefHeight="54.0" prefWidth="530.0" text="1. WAP that will take n integer numbers into an array, and then print all the integers into reverse order (from the last valid index to index 0)." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="208.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="230.0" prefHeight="36.0" prefWidth="198.0" text="Input: 1 2 3 4 5" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="288.0" prefHeight="43.0" prefWidth="550.0" text="2.WAP that will take n integer numbers into an array, and then sum up all the even integers in that array" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="331.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="353.0" prefHeight="22.0" prefWidth="198.0" text="Input: &quot;2 8 3 9 0 1&quot;" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="396.0" prefHeight="43.0" prefWidth="523.0" text="3.WAP that will take n integer numbers into an array, and then reverse all the integers within that array. Finally print them all from 0 index to last valid index." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="464.0" prefHeight="16.0" prefWidth="198.0" text="Input: 2 8 3 9 0 1" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="510.0" prefHeight="43.0" prefWidth="523.0" text="WAP that will take n integer numbers into an array, and then find the maximum -minimum among them with its index position" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="559.0" prefHeight="22.0" prefWidth="276.0" text="Input: 1 2 3 4 5" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="CPlusArrayBackBtn" layoutX="658.0" layoutY="689.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="&lt;&lt;Back" />
+            <Button fx:id="CPlusArrayNrxtBtn" layoutX="766.0" layoutY="689.0" mnemonicParsing="false" onAction="#swiping" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="Next&gt;&gt;" />
+            <Label layoutX="291.0" layoutY="126.0" prefHeight="22.0" prefWidth="187.0" text="C++ Array :" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="260.0" prefHeight="28.0" prefWidth="198.0" text="OutPut: 5 4 3 2 1" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="581.0" prefHeight="43.0" prefWidth="170.0" text="Output: Max: 5, Index: 4    Min: 1, Index: 0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="374.0" prefHeight="22.0" prefWidth="198.0" text="output : 10" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="439.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="486.0" prefHeight="16.0" prefWidth="198.0" text="Output: 1 0 9 3 8 2" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Function" layoutX="10.0" layoutY="10.0" prefHeight="790.8" prefWidth="919.6" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="38.0" layoutY="59.0" prefHeight="641.0" prefWidth="198.0" styleClass="anchor-pane">
+               <children>
+                  <Button fx:id="FunctionArr" layoutX="42.0" layoutY="238.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Array">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="FunctionFunction" layoutX="42.0" layoutY="288.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Function">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="FunctionStr" layoutX="42.0" layoutY="337.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="String">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="FunctionBasic" layoutX="42.0" layoutY="191.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Basic">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="304.0" layoutY="50.0" prefHeight="54.0" prefWidth="243.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="76.0" layoutY="13.0" text="C Plus" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_plus-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="286.0" layoutY="154.0" prefHeight="54.0" prefWidth="530.0" text="1. Function that takes two numbers as input and determines if the first number is greater than, equal to or less than the second number." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="206.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="228.0" prefHeight="22.0" prefWidth="198.0" text="Input: 5 4" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="274.0" prefHeight="43.0" prefWidth="550.0" text="2.Function to calculate the sum of n numbers coming from the console and stored in an array." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="317.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="339.0" prefHeight="22.0" prefWidth="198.0" text="Input: 80 33 27" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="387.0" prefHeight="43.0" prefWidth="523.0" text="3. Function that takes an array of n integer numbers as input and prints them in reverse order." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="457.0" prefHeight="16.0" prefWidth="198.0" text="Input: 5 12 34 8 43 21 9" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="510.0" prefHeight="43.0" prefWidth="523.0" text="4.WAP that will take n integer numbers into an array, and then find the maximum -minimum among them with its index position" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="559.0" prefHeight="22.0" prefWidth="276.0" text="Input: 1 2 3 4 5" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="CPlusFunctionBackBtn" layoutX="658.0" layoutY="689.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="&lt;&lt;Back" />
+            <Button fx:id="CPlusFunctionNrxtBtn" layoutX="766.0" layoutY="689.0" mnemonicParsing="false" onAction="#swiping" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="Next&gt;&gt;" />
+            <Label layoutX="291.0" layoutY="126.0" prefHeight="22.0" prefWidth="187.0" text="C++ Function :" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="250.0" prefHeight="15.0" prefWidth="198.0" text="OutPut: 5 is greater than 4" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="581.0" prefHeight="43.0" prefWidth="170.0" text="Output: Max: 5, Index: 4    Min: 1, Index: 0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="361.0" prefHeight="22.0" prefWidth="336.0" text="output : Sum In Function: 140,  Sum In Main: 140" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="431.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="479.0" prefHeight="16.0" prefWidth="198.0" text="Output: 9 21 43 8 34 12 5" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="string" layoutX="10.0" layoutY="10.0" prefHeight="801.2" prefWidth="930.0" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="38.0" layoutY="59.0" prefHeight="641.0" prefWidth="198.0" styleClass="anchor-pane">
+               <children>
+                  <Button fx:id="StringArr" layoutX="42.0" layoutY="238.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Array">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="StringFun" layoutX="42.0" layoutY="288.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Function">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="StringString" layoutX="42.0" layoutY="337.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="String">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="StringBasic" layoutX="42.0" layoutY="191.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Basic">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="304.0" layoutY="50.0" prefHeight="54.0" prefWidth="243.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="76.0" layoutY="13.0" text="C Plus" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_plus-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="286.0" layoutY="152.0" prefHeight="54.0" prefWidth="530.0" text="1. Write a program in C++ to find the length of a string without using any library function." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="202.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="223.0" prefHeight="22.0" prefWidth="198.0" text="Input: “My name is andy”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="245.0" prefHeight="43.0" prefWidth="550.0" text="2.Write a program in C++ to concatenate two strings without using any library function." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="288.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="310.0" prefHeight="43.0" prefWidth="114.0" text="Input: “My name ”“is andy”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="353.0" prefHeight="28.0" prefWidth="523.0" text="3. Write a program in C++ to count the number of words in a string" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="403.0" prefHeight="16.0" prefWidth="198.0" text="Input: “My name is andy”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="432.0" prefHeight="28.0" prefWidth="523.0" text="4.Write a program in C to find the reverse of a string." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="292.0" layoutY="463.0" prefHeight="22.0" prefWidth="276.0" text="Input: “Abc 123 7&amp;*&amp;*”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="CPlusStringBackBtn" layoutX="748.0" layoutY="683.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="36.0" prefWidth="98.0" styleClass="button-home-page" text="&lt;&lt;Back" />
+            <Label layoutX="291.0" layoutY="126.0" prefHeight="22.0" prefWidth="187.0" text="C++ String :" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="528.0" layoutY="223.0" prefHeight="15.0" prefWidth="198.0" text="OutPut: 15" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="476.0" layoutY="460.0" prefHeight="28.0" prefWidth="178.0" text="Output: “*&amp;*&amp;7 321 cbA”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="381.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="508.0" layoutY="403.0" prefHeight="16.0" prefWidth="198.0" text="Output: 4" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="453.0" layoutY="310.0" prefHeight="28.0" prefWidth="214.0" text="Output: “My name is andy”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="488.0" prefHeight="43.0" prefWidth="577.0" text="5. Write a program in C++ to count the occurrences of a character in a string regardless of its case." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="530.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="552.0" prefHeight="22.0" prefWidth="297.0" text="“WELCOME to CSE, everyone”   chracter: &quot;E&quot;" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="594.0" layoutY="549.0" prefHeight="28.0" prefWidth="178.0" text="Output: “6”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="577.0" prefHeight="22.0" prefWidth="578.0" text="6.Write a program in C to check whether a string is a palindrome or not." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="599.0" prefHeight="22.0" prefWidth="187.0" text="Sample input and output" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="291.0" layoutY="628.0" prefHeight="22.0" prefWidth="142.0" text="“My name is andy”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="509.0" layoutY="628.0" prefHeight="22.0" prefWidth="142.0" text="No" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="291.0" layoutY="650.0" prefHeight="22.0" prefWidth="142.0" text="“madam”" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="507.0" layoutY="650.0" prefHeight="22.0" prefWidth="142.0" text="Yes" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

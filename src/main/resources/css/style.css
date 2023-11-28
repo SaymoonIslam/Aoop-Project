@@ -30,7 +30,6 @@
     -fx-background-color: #363636;
 }
 
-
 .test-field {
     -fx-background-color: transparent;
     -fx-border-color:#fff;
@@ -45,6 +44,20 @@
 }
 .hyperlink{
 -fx-text-fill:white;
+}
+
+.web-open-button{
+-fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-border-radius: 45;
+    -fx-background-radius:45;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+
+}
+.web-open-button:hover{
+-fx-background-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-text-fill: white;
 }
 
 .button {
@@ -72,6 +85,7 @@
     -fx-background-color: linear-gradient(to bottom, #ff9900, #ff6600);
     -fx-text-fill: white;
 }
+
 .cancel-button {
     -fx-background-color: transparent;
     -fx-border-color:transparent ;
@@ -118,5 +132,7 @@
     -fx-background-insets: 0, 1;
 }
 
+.info-field{
+-fx-background-color:transparent;
 
 }

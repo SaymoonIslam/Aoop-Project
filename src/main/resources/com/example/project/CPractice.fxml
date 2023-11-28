@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.CPractice">
+   <children>
+      <AnchorPane layoutX="300.0" layoutY="201.0" prefHeight="760.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="33.0" layoutY="64.0" prefHeight="656.0" prefWidth="185.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button layoutX="29.0" layoutY="225.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Loop" />
+                  <Button layoutX="28.0" layoutY="271.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Array" />
+                  <Button layoutX="29.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="String" />
+                  <Button layoutX="27.0" layoutY="364.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Function" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-4.2" prefHeight="770.0" prefWidth="896.0" AnchorPane.bottomAnchor="4.2000000000000455" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.2">
+         <children>
+            <AnchorPane layoutX="33.0" layoutY="64.0" prefHeight="656.0" prefWidth="185.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button layoutX="29.0" layoutY="225.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Loop" />
+                  <Button layoutX="28.0" layoutY="271.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Array" />
+                  <Button layoutX="29.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="String" />
+                  <Button layoutX="27.0" layoutY="364.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Function" />
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="281.0" layoutY="64.0" prefHeight="27.0" prefWidth="200.0" text="Basic Problems:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="118.0" prefHeight="75.0" prefWidth="568.0" text="1. Write a C program that takes n number of positive integers. Find the integer that appears the least number of times among the said integers. If there are multiple such integers, select the smallest one." wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="204.0" text="Sample Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="227.0" prefHeight="27.0" prefWidth="110.0" text="(1,2,3) -&gt; 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="254.0" prefHeight="75.0" prefWidth="568.0" text="2. Write a C program that takes a string and two integers (n1, n2). Now reverse the sequence of characters in the string between n1 and n2.2. Write a C program that takes a string and two integers (n1, n2). Now reverse the sequence of characters in the string between n1 and n2." wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="340.0" text="Sample Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="366.0" prefHeight="27.0" prefWidth="270.0" text="(&quot;abcdxyabcd&quot;, 5, 6) -&gt; &quot;abcdyxabcd&quot;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="399.0" prefHeight="75.0" prefWidth="568.0" text="3. Write a C program that accepts three integers from the user and finds the second largest number among them.3. Write a C program that accepts three integers from the user and finds the second largest number among them." wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="484.0" text="Sample Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="510.0" prefHeight="27.0" prefWidth="270.0" text="(10, 12, 24) -&gt; 12">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="541.0" prefHeight="59.0" prefWidth="568.0" text="4. Write a C program that accepts three integers: A, B, and X. Find the smallest absolute value of the difference between X and the integers between A and B." wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="600.0" text="Sample Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="618.0" prefHeight="27.0" prefWidth="270.0" text="Input A, B: 7, 11">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="645.0" prefHeight="27.0" prefWidth="270.0" text="C:20">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="754.0" layoutY="695.0" mnemonicParsing="false" onAction="#switchTOHomePage" prefHeight="26.0" prefWidth="66.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

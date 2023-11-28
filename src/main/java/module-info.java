@@ -7,6 +7,7 @@ module com.example.project {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires mysql.connector.j;
+    requires javafx.web;
 
 
     opens com.example.project to javafx.fxml;

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="760.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Javapractice">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="760.0" prefWidth="887.0" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <AnchorPane layoutX="49.0" layoutY="73.0" prefHeight="614.0" prefWidth="194.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+               <children>
+                  <Button layoutX="49.0" layoutY="161.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="Method" />
+                  <Button layoutX="49.0" layoutY="209.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="Java Thread" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="286.0" layoutY="47.0" prefHeight="50.0" prefWidth="194.0" styleClass="anchor-pane">
+               <children>
+                  <Label layoutX="59.0" layoutY="12.0" text="JAVA" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="27.0" fitWidth="57.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/java-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="286.0" layoutY="125.0" prefHeight="63.0" prefWidth="530.0" text="Write a Java program that accepts four integers from the user and prints equal if all four are equal, and not equal otherwise." wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="189.0" prefHeight="26.0" prefWidth="112.0" text="Sample Output:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="215.0" prefHeight="26.0" prefWidth="238.0" text="Input first number: 25">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="241.0" prefHeight="26.0" prefWidth="238.0" text="Input second number: 37">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="267.0" prefHeight="26.0" prefWidth="238.0" text="Input third number: 45">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="300.0" prefHeight="63.0" prefWidth="530.0" text=" Write a Java program to print the contents of a two-dimensional Boolean array where t represents true and f represents false." wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="363.0" prefHeight="26.0" prefWidth="112.0" text="Sample Output:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="389.0" prefHeight="26.0" prefWidth="238.0" text="array = {{true, false, true},">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="427.0" prefHeight="70.0" prefWidth="580.0" text="Write a Java program that returns the largest integer but not larger than the base-2 logarithm of a specified integer.Write a Java program that returns the largest integer but not larger than the base-2 logarithm of a specified integer." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="497.0" prefHeight="26.0" prefWidth="112.0" text="Sample Output:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="523.0" prefHeight="26.0" prefWidth="238.0" text="Original Number: 2350">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="549.0" prefHeight="26.0" prefWidth="238.0" text="Result: 115">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="575.0" prefHeight="70.0" prefWidth="580.0" text="Write a Java program to create a two-dimensional array (m x m) A[][] such that A[i][j] is false if I and j are prime otherwise A[i][j] becomes true." wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="660.0" prefHeight="26.0" prefWidth="238.0" text="true true true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="632.0" prefHeight="26.0" prefWidth="112.0" text="Sample Output:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="729.0" layoutY="695.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="button-home-page" text="Next&gt;&gt;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

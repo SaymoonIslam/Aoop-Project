@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="homepage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HomepageController">
+<StackPane fx:id="homepage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HomepageController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="home-page-background" stylesheets="@../../../css/style.css">
+      <AnchorPane prefHeight="854.0" prefWidth="1037.0" styleClass="home-page-background" stylesheets="@../../../css/style.css">
          <children>
-            <AnchorPane fx:id="pagenoZero" prefHeight="823.0" prefWidth="960.0" styleClass="home-page-background" stylesheets="@../../../css/style.css">
+            <AnchorPane fx:id="pagenoZero" layoutX="26.0" prefHeight="908.0" prefWidth="1046.4" styleClass="home-page-background" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <AnchorPane layoutX="28.0" layoutY="12.0" prefHeight="782.0" prefWidth="270.0">
                      <children>
-                        <AnchorPane layoutY="36.0" prefHeight="744.0" prefWidth="242.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                        <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="744.0" prefWidth="242.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
                            <children>
                               <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" layoutX="85.0" layoutY="127.0" size="80" />
                               <Label layoutX="69.0" layoutY="138.0" text="welcome" textFill="WHITE">
@@ -35,28 +39,23 @@
                                     <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="33" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="ProgrBtn" layoutX="30.0" layoutY="321.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="182.0">
+                              <Button fx:id="ProgrBtn" layoutX="30.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="46.0" prefWidth="182.0">
                                  <graphic>
                                     <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="33" />
                                  </graphic>
                               </Button>
                               <Button fx:id="taskBtn" layoutX="31.0" layoutY="386.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="177.0">
                                  <graphic>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="TASKS" size="33" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="33" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="settingBtn" layoutX="29.0" layoutY="450.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="178.0">
-                                 <graphic>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="COG" size="33" />
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="logoutBtn" layoutX="34.0" layoutY="647.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="178.0" />
+                              <Button fx:id="logoutBtn" layoutX="34.0" layoutY="647.0" mnemonicParsing="false" onAction="#switchTOMainPage" prefHeight="46.0" prefWidth="178.0" />
                               <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" layoutX="110.0" layoutY="681.0" size="33" />
                            </children>
                         </AnchorPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="298.0" layoutY="75.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="CProgram" layoutX="314.0" layoutY="83.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="89.0" fitWidth="119.0" layoutX="26.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -76,7 +75,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="298.0" layoutY="238.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="CPlusProgram" layoutX="314.0" layoutY="246.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="89.0" fitWidth="125.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -97,7 +96,7 @@
                         <Label layoutX="167.0" layoutY="73.0" prefHeight="22.0" prefWidth="411.0" text="used language in game development.used language in game development." textFill="#716d6d" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="298.0" layoutY="406.0" prefHeight="154.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="Java" layoutX="314.0" layoutY="414.0" prefHeight="154.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="99.0" fitWidth="113.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -117,7 +116,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="298.0" layoutY="574.0" prefHeight="154.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="105.20000000000005" AnchorPane.leftAnchor="298.0" AnchorPane.rightAnchor="76.39999999999998" AnchorPane.topAnchor="574.0">
+                  <AnchorPane fx:id="PythonBar" layoutX="315.0" layoutY="585.0" prefHeight="167.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="150.19999999999993" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="145.79999999999995" AnchorPane.topAnchor="585.0">
                      <children>
                         <ImageView fitHeight="99.0" fitWidth="113.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -137,9 +136,9 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="772.0" layoutY="740.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="110.0" styleClass="button-home-page" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
+                  <Button fx:id="nextPageBtn" layoutX="777.0" layoutY="780.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="31.0" prefWidth="106.0" styleClass="button-home-page" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
                   <AnchorPane fx:id="aboutC" layoutX="304.0" layoutY="203.0" prefHeight="526.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" visible="false">
@@ -153,7 +152,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="pagenoOne" focusTraversable="true" prefHeight="823.0" prefWidth="960.0" visible="false">
+            <AnchorPane fx:id="pagenoOne" layoutX="37.0" layoutY="19.0" prefHeight="843.0" prefWidth="998.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
                <children>
                   <AnchorPane layoutX="28.0" layoutY="12.0" prefHeight="782.0" prefWidth="270.0">
                      <children>
@@ -170,19 +169,19 @@
                                     <Font name="Arial Rounded MT Bold" size="29.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="homeBTN" layoutX="28.0" layoutY="256.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="190.0">
+                              <Button fx:id="homeBtn1" layoutX="28.0" layoutY="256.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="190.0">
                                  <graphic>
                                     <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="33" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="ProgrBtn1" layoutX="30.0" layoutY="321.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="182.0">
+                              <Button fx:id="ProgrBtn1" layoutX="30.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="46.0" prefWidth="182.0">
                                  <graphic>
                                     <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="33" />
                                  </graphic>
                               </Button>
                               <Button fx:id="taskBtn1" layoutX="31.0" layoutY="386.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="177.0">
                                  <graphic>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="TASKS" size="33" />
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="33" />
                                  </graphic>
                               </Button>
                               <Button fx:id="settingBtn1" layoutX="29.0" layoutY="450.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="178.0">
@@ -190,94 +189,71 @@
                                     <FontAwesomeIconView fill="WHITE" glyphName="COG" size="33" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="logoutBtn1" layoutX="34.0" layoutY="647.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="178.0" />
-                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" layoutX="110.0" layoutY="681.0" size="33" />
                            </children>
                         </AnchorPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="304.0" layoutY="53.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="CProgram1" layoutX="304.0" layoutY="147.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="89.0" fitWidth="119.0" layoutX="26.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/JavaScript.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="163.0" layoutY="14.0" text="JavaScript">
+                        <Label layoutX="163.0" layoutY="27.0" text="JavaScript">
                            <font>
-                              <Font name="Berlin Sans FB" size="26.0" />
+                              <Font name="Berlin Sans FB" size="25.0" />
                            </font>
                         </Label>
-                        <Label layoutX="163.0" layoutY="44.0" prefHeight="22.0" prefWidth="411.0" text="JavaScript is a versatile programming language commonly used for" textFill="#716d6d" />
-                        <Button fx:id="javaScript" layoutX="163.0" layoutY="102.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text=" learning JavaScript now&gt;&gt;">
+                        <Label layoutX="163.0" layoutY="60.0" prefHeight="22.0" prefWidth="411.0" text="JavaScript is the world's most popular programming language." textFill="#716d6d" />
+                        <Button fx:id="learnJavaScript" layoutX="163.0" layoutY="102.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text="Start learning JavaScript now&gt;&gt;">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Label layoutX="163.0" layoutY="66.0" prefHeight="22.0" prefWidth="411.0" text="creating dynamic content and interactivity on web pages." textFill="#716d6d" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="304.0" layoutY="216.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="CPlusProgram1" layoutX="304.0" layoutY="310.0" prefHeight="143.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="89.0" fitWidth="125.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/Css.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="167.0" layoutY="21.0" text="CSS ">
+                        <Label layoutX="167.0" layoutY="21.0" text="CSS">
                            <font>
                               <Font name="Berlin Sans FB" size="25.0" />
                            </font>
                         </Label>
-                        <Label layoutX="167.0" layoutY="51.0" prefHeight="22.0" prefWidth="411.0" text="CSS is a styling language that controls the visual presentation of HTML " textFill="#716d6d" />
-                        <Button fx:id="css" layoutX="171.0" layoutY="106.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text="Start learning CSS now&gt;&gt;">
+                        <Label layoutX="167.0" layoutY="51.0" prefHeight="22.0" prefWidth="411.0" text="The language for styling web pages" textFill="#716d6d" />
+                        <Button fx:id="learnCss" layoutX="171.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text="Start learning CSS now&gt;&gt;">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Label layoutX="167.0" layoutY="73.0" prefHeight="22.0" prefWidth="411.0" text=" or XML documents ." textFill="#716d6d" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="304.0" layoutY="384.0" prefHeight="154.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane fx:id="Java1" layoutX="304.0" layoutY="478.0" prefHeight="154.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="99.0" fitWidth="113.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/Html.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="html" layoutX="171.0" layoutY="116.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text="Start learning HTML now&gt;&gt;">
+                        <Label layoutX="167.0" layoutY="21.0" prefHeight="31.0" prefWidth="70.0" text="HTML">
+                           <font>
+                              <Font name="Berlin Sans FB" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="167.0" layoutY="51.0" prefHeight="22.0" prefWidth="411.0" text="The language for building web pages" textFill="#716d6d" />
+                        <Button fx:id="learnHtml" layoutX="171.0" layoutY="116.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="27.0" prefWidth="178.0" styleClass="button-home-page" text="Start learning HTML now&gt;&gt;">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Label layoutX="167.0" layoutY="18.0" text="HTML">
-                           <font>
-                              <Font name="Berlin Sans FB" size="26.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="167.0" layoutY="48.0" prefHeight="22.0" prefWidth="411.0" text="HTML is the standard markup language for Web pages." textFill="#716d6d" />
                      </children>
                   </AnchorPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="CprogramPage" prefHeight="823.0" prefWidth="960.0" visible="false">
-               <children>
-                  <AnchorPane layoutX="28.0" layoutY="12.0" prefHeight="782.0" prefWidth="270.0" />
-                  <AnchorPane layoutX="108.0" layoutY="30.0" prefHeight="46.0" prefWidth="200.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
-                     <children>
-                        <ImageView fitHeight="34.0" fitWidth="81.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/C_pro.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="53.0" layoutY="13.0" text="C Programming">
-                           <font>
-                              <Font name="Berlin Sans FB" size="17.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <Button layoutX="772.0" layoutY="740.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="110.0" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
+                  <Button fx:id="BackBtn" layoutX="772.0" layoutY="740.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="46.0" prefWidth="110.0" styleClass="button-home-page" stylesheets="@../../../css/style.css" text="&lt;&lt;Back">
                      <font>
                         <Font size="19.0" />
                      </font>
@@ -293,92 +269,497 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="cPlusPage" prefHeight="823.0" prefWidth="960.0" visible="false">
+            <AnchorPane fx:id="CprogramPage" layoutX="9.0" layoutY="17.0" onDragDetected="#switchTOCPlusPractice" prefHeight="889.6" prefWidth="1036.8" styleClass="home-page-background" stylesheets="@../../../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <AnchorPane layoutX="59.0" layoutY="35.0" prefHeight="46.0" prefWidth="178.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane layoutX="96.0" layoutY="80.0" prefHeight="58.0" prefWidth="242.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
                      <children>
-                        <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="8.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="46.0" fitWidth="38.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/C_pro.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="16.0" text="C Programing" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="127.0" layoutY="175.0" prefHeight="38.0" prefWidth="411.0" text="What is C Programming Language?">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="129.0" layoutY="218.0" prefHeight="108.0" prefWidth="764.0" text="C is a high-level programming language developed for system programming and creating efficient software. Known for its speed and versatility, C provides low-level access to memory, making it suitable for tasks like operating system development and embedded systems. Its syntax and features have influenced many modern programming languages." wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="133.0" layoutY="365.0" prefHeight="36.0" prefWidth="106.0" text="Example">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="182.0" fitWidth="298.0" layoutX="129.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/cCode.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="154.0" fitWidth="242.0" layoutX="411.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Output.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="133.0" layoutY="650.0" prefHeight="36.0" prefWidth="167.0" text="C Exercises">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="BackBtnTohomes" alignment="CENTER" contentDisplay="CENTER" layoutX="832.0" layoutY="779.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="31.0" prefWidth="87.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="127.0" layoutY="695.0" mnemonicParsing="false" onAction="#switchTOCPlusPractice" prefHeight="38.0" prefWidth="160.0" styleClass="button-home-page" text="Get Start&gt;&gt;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="CPLusPage" layoutX="15.0" prefHeight="843.0" prefWidth="970.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="147.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/C_plus-removebg-preview.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="44.0" layoutY="14.0" text="C++ Programming">
+                        <Label layoutX="61.0" layoutY="12.0" text="C++" textFill="WHITE">
                            <font>
-                              <Font name="Berlin Sans FB" size="16.0" />
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="772.0" layoutY="740.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="110.0" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="454.0" text="What is C++ Programming Language?">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="181.0" prefWidth="777.0" text="C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.It was designed with a bias toward system programming and embedded, resource-constrained and large systems, with performance, efficiency and flexibility of use as its design highlights. Many vendors provide C++ compilers, including the Free Software Foundation, Microsoft, Intel, and IBM." wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="131.0" layoutY="695.0" mnemonicParsing="false" onAction="#switchTOCPlusPractice" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="aboutC2" layoutX="304.0" layoutY="203.0" prefHeight="526.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" visible="false">
-                     <children>
-                        <Label layoutX="25.0" layoutY="34.0" text="What is C?">
-                           <font>
-                              <Font name="Franklin Gothic Medium" size="23.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
+                  <Label layoutX="129.0" layoutY="649.0" prefHeight="34.0" prefWidth="229.0" text="C++ Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="387.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="196.0" fitWidth="322.0" layoutX="121.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="196.0" fitWidth="255.0" layoutX="446.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Output.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="CPlusTOHome" layoutX="837.0" layoutY="764.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="31.0" prefWidth="87.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="javaPage" prefHeight="823.0" prefWidth="960.0" visible="false">
+            <AnchorPane fx:id="javaPage" layoutX="25.0" layoutY="5.0" onDragDetected="#switchPages" prefHeight="843.0" prefWidth="970.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
                <children>
-                  <AnchorPane layoutX="50.0" layoutY="49.0" prefHeight="46.0" prefWidth="149.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="167.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
                      <children>
-                        <ImageView fitHeight="31.0" fitWidth="55.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/java-removebg-preview.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="54.0" layoutY="5.0" prefHeight="31.0" prefWidth="70.0" text="Java">
+                        <Label layoutX="61.0" layoutY="12.0" text="JAVA" textFill="WHITE">
                            <font>
-                              <Font name="Berlin Sans FB" size="16.0" />
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="772.0" layoutY="740.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="110.0" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="182.0" text="What is JAVA?">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="181.0" prefWidth="777.0" text="Java is a versatile, object-oriented programming language developed by Sun Microsystems. It follows the &quot;Write Once, Run Anywhere&quot; principle, allowing code to be executed on any device with a Java Virtual Machine (JVM). Known for its simplicity and readability, Java supports automatic memory management through garbage collection. Applications are compiled into bytecode and interpreted by the JVM at runtime. Widely used in web development, enterprise systems, and Android app development, Java has a rich ecosystem of libraries and frameworks." wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="JavaPrac" layoutX="131.0" layoutY="695.0" mnemonicParsing="false" onAction="#switchTOJavaPractice" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="aboutC3" layoutX="304.0" layoutY="203.0" prefHeight="526.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" visible="false">
+                  <Label layoutX="121.0" layoutY="634.0" prefHeight="34.0" prefWidth="229.0" text="JAVA Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="387.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="214.0" fitWidth="320.0" layoutX="109.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/JAVA.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="196.0" fitWidth="255.0" layoutX="446.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Output.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="JavaTOHOme" layoutX="837.0" layoutY="764.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="31.0" prefWidth="87.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="javaScriptPage" layoutX="-4.0" layoutY="15.0" prefHeight="843.0" prefWidth="1009.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="223.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
                      <children>
-                        <Label layoutX="25.0" layoutY="34.0" text="What is C?">
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/JavaScript.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="12.0" text="JavaScript" textFill="WHITE">
                            <font>
-                              <Font name="Franklin Gothic Medium" size="23.0" />
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="254.0" text="What is  JavaScript?">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="196.0" prefWidth="827.0" text="JavaScript is a versatile, high-level programming language mainly used for web development. It enables dynamic content on websites, running on web browsers to manipulate webpage elements in real-time. Crucial for creating modern, responsive web applications, JavaScript has a rich ecosystem and supports asynchronous operations for efficient development.JavaScript is a versatile, high-level programming language mainly used for web development. It enables dynamic content on websites, running on web browsers to manipulate webpage elements in real-time. Crucial for creating modern, responsive web applications, JavaScript has a rich ecosystem and supports asynchronous operations for efficient development." wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="JavaPrac1" layoutX="125.0" layoutY="748.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="115.0" layoutY="692.0" prefHeight="34.0" prefWidth="254.0" text="JavaScript Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="406.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="196.0" fitWidth="255.0" layoutX="623.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Output.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="javascriptToHome" layoutX="837.0" layoutY="764.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="31.0" prefWidth="87.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextArea layoutX="115.0" layoutY="446.0" prefHeight="232.0" prefWidth="334.0" text="&lt;html&gt;&lt;head&gt;    &lt;title&gt;JavaScript Sample&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;h2&gt;Click the button below:&lt;/h2&gt;    &lt;!-- A button element with an onclick attribute --&gt;    &lt;button onclick=&quot;showAlert()&quot;&gt;Click me&lt;/button&gt;    &lt;script&gt;        // JavaScript function to show an alert        function showAlert() {            alert('Hello  World');        }    &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextArea>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="pythonPage" prefHeight="823.0" prefWidth="960.0" visible="false">
+            <AnchorPane fx:id="pythonPage" layoutX="-1.0" layoutY="-1.0" prefHeight="869.0" prefWidth="1016.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
                <children>
-                  <AnchorPane layoutX="50.0" layoutY="49.0" prefHeight="46.0" prefWidth="149.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="190.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
                      <children>
-                        <ImageView fitHeight="31.0" fitWidth="55.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="12.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/python.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="54.0" layoutY="5.0" prefHeight="31.0" prefWidth="70.0" text="Python">
+                        <Label layoutX="61.0" layoutY="12.0" text="PYTHON" textFill="WHITE">
                            <font>
-                              <Font name="Berlin Sans FB" size="16.0" />
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="772.0" layoutY="740.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="110.0" stylesheets="@../../../css/style.css" text="Next&gt;&gt;">
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="207.0" text="What is  Python?">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="181.0" prefWidth="777.0" text="Python is a high-level programming language known for its readability and versatility. Created in 1991, it emphasizes concise and expressive code. Python supports various programming paradigms, including procedural, object-oriented, and functional programming. Its extensive standard library and third-party ecosystem make it suitable for diverse applications, from web development to data science. Python's dynamic typing and automatic memory management contribute to its popularity and widespread use in both academic and industrial contexts." wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="JavaPrac11" layoutX="131.0" layoutY="695.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="aboutC31" layoutX="304.0" layoutY="203.0" prefHeight="526.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" visible="false">
+                  <Label layoutX="127.0" layoutY="648.0" prefHeight="34.0" prefWidth="229.0" text="Python Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="387.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="196.0" fitWidth="255.0" layoutX="446.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/C_Output.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="121.0" layoutY="434.0" prefHeight="108.0" prefWidth="242.0" text="print(&quot;Hello, World&quot;)">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="pythonToHome" layoutX="829.0" layoutY="750.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="34.0" prefWidth="94.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="htmlPage" layoutX="9.0" layoutY="9.0" prefHeight="869.0" prefWidth="1016.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="190.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Html.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="12.0" text="HTML" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="207.0" text="What is  HTML?">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="196.0" prefWidth="850.0" text="HTML is a coding language for making web pages. It uses tags to mark different parts of a page, like headings, paragraphs, links, and images. Tags come in pairs, with an opening tag and a closing tag, enclosed in angle brackets. HTML gives a structure to content, allowing browsers to show web pages correctly. Often, HTML works with CSS for styling and JavaScript for added features on web pages.HTML is a coding language for making web pages. It uses tags to mark different parts of a page, like headings, paragraphs, links, and images. Tags come in pairs, with an opening tag and a closing tag, enclosed in angle brackets. HTML gives a structure to content, allowing browsers to show web pages correctly. Often, HTML works with CSS for styling and JavaScript for added features on web pages." wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="JavaPrac111" layoutX="131.0" layoutY="735.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="121.0" layoutY="694.0" prefHeight="34.0" prefWidth="229.0" text="HTML Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="387.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="196.0" fitWidth="255.0" layoutX="446.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/htmlout.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="htmlTOHome" layoutX="829.0" layoutY="750.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="34.0" prefWidth="94.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="232.0" fitWidth="255.0" layoutX="123.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/htmlcode.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="CssPage" layoutX="19.0" layoutY="19.0" prefHeight="869.0" prefWidth="1016.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="88.0" layoutY="53.0" prefHeight="58.0" prefWidth="190.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Css.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="12.0" text="CSS" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="119.0" layoutY="148.0" prefHeight="38.0" prefWidth="207.0" text="What is  CSS?">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="191.0" prefHeight="196.0" prefWidth="850.0" text="CSS (Cascading Style Sheets) is a design language for web documents. It controls the layout and presentation of HTML elements. Using selectors and properties, CSS defines how elements should look on a webpage. The box model organizes elements into content, padding, border, and margin. Cascading allows for a consistent style hierarchy, facilitating efficient and flexible styling of web pages.CSS (Cascading Style Sheets) is a design language for web documents. It controls the layout and presentation of HTML elements. Using selectors and properties, CSS defines how elements should look on a webpage. The box model organizes elements into content, padding, border, and margin. Cascading allows for a consistent style hierarchy, facilitating efficient and flexible styling of web pages." wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="JavaPrac1111" layoutX="131.0" layoutY="735.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" styleClass="button-home-page" text="Get Started&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="121.0" layoutY="694.0" prefHeight="34.0" prefWidth="229.0" text="CSS Exercises">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="387.0" text="Example:">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cssToHome" layoutX="829.0" layoutY="750.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="34.0" prefWidth="94.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="297.0" fitWidth="302.0" layoutX="123.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/csscode.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="CssPage1" layoutX="-1.0" prefHeight="899.2" prefWidth="1045.6" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="103.0" layoutY="95.0" prefHeight="58.0" prefWidth="190.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/C_pro.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="12.0" prefHeight="31.0" prefWidth="214.0" text="C Programming" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="cssToHome1" layoutX="869.0" layoutY="804.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="34.0" prefWidth="94.0" styleClass="button-home-page" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="progressPage" layoutX="36.0" layoutY="10.0" prefHeight="889.0" prefWidth="1010.0" styleClass="home-page-background" stylesheets="@../../../css/style.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="28.0" layoutY="12.0" prefHeight="782.0" prefWidth="270.0">
+                     <children>
+                        <AnchorPane layoutY="65.0" prefHeight="744.0" prefWidth="242.0" styleClass="anchor-pane" stylesheets="@../../../css/style.css">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" layoutX="85.0" layoutY="127.0" size="80" />
+                              <Label layoutX="69.0" layoutY="138.0" text="welcome" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="homeUserName2" alignment="CENTER" layoutX="34.0" layoutY="172.0" prefHeight="32.0" prefWidth="190.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="homeBTN" layoutX="28.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="46.0" prefWidth="190.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="33" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="progressBtn" layoutX="30.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="46.0" prefWidth="182.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="33" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="taskBtn2" layoutX="31.0" layoutY="386.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="177.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TASKS" size="33" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="settingBtn2" layoutX="29.0" layoutY="450.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="178.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="COG" size="33" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="289.0" layoutY="231.0" prefHeight="469.0" prefWidth="650.0" styleClass="course-bg" stylesheets="@../../../css/style.css">
+                     <children>
+                        <Label layoutX="247.0" layoutY="76.0" text="Progress Bar">
+                           <font>
+                              <Font name="Berlin Sans FB" size="25.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="78.0" layoutY="120.0" prefHeight="302.0" prefWidth="494.0">
+                           <children>
+                              <LineChart fx:id="progressChart" layoutX="-6.0" layoutY="-77.0" prefHeight="323.2" prefWidth="494.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="progressToHome" layoutX="786.0" layoutY="788.0" mnemonicParsing="false" onAction="#switchPages" prefHeight="36.0" prefWidth="110.0" styleClass="button-home-page" stylesheets="@../../../css/style.css" text="&lt;&lt;Back">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane fx:id="aboutC2" layoutX="304.0" layoutY="203.0" prefHeight="526.0" prefWidth="586.0" styleClass="course-bg" stylesheets="@../../../css/style.css" visible="false">
                      <children>
                         <Label layoutX="25.0" layoutY="34.0" text="What is C?">
                            <font>

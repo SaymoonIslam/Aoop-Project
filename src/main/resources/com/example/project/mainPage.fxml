@@ -111,7 +111,7 @@
                </font>
             </PasswordField>
             <CheckBox fx:id="login_ShowPassword" layoutX="337.0" layoutY="274.0" mnemonicParsing="false" onAction="#showPass" text="Show password" textFill="WHITE" />
-            <Hyperlink fx:id="login_ForgotPass" layoutX="481.0" layoutY="271.0" onAction="#showForgotPage" text="Forgot password?" textFill="WHITE">
+            <Hyperlink fx:id="login_ForgotPass" layoutX="481.0" layoutY="271.0" onAction="#switchFrom" text="Forgot password?" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font></Hyperlink>
@@ -180,7 +180,7 @@
             </Button>
             <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="187.0" layoutY="81.0" size="70" />
             <FontAwesomeIconView fill="WHITE" glyphName="PHONE" layoutX="79.0" layoutY="267.0" size="22" />
-            <Button fx:id="forBackBtn" layoutX="149.0" layoutY="495.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="42.0" prefWidth="120.0" text="Back">
+            <Button fx:id="BackBtn" layoutX="149.0" layoutY="495.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="42.0" prefWidth="120.0" text="Back">
                <font>
                   <Font size="19.0" />
                </font>

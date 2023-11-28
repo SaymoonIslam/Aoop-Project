@@ -113,7 +113,7 @@ public class HelloController {
     @FXML
     private Button signUp;
     @FXML
-    private Button forBackBtn;
+    private Button BackBtn;
 
 
     @FXML
@@ -138,7 +138,7 @@ public class HelloController {
 
     }
     public void switchTOMainPage() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("homepage.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("homePage.fxml")));
         Stage stage = (Stage) login_UserName.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -171,7 +171,7 @@ public class HelloController {
                     // GO TO MAIN PAGE
 
                     data.username = login_UserName.getText();
-                    alert.successMessage("Successfully login");
+                    //alert.successMessage("Successfully login");
                     switchTOMainPage();
                 } else {
                     alert.errorMessage("Incorrect Username or Password");
@@ -196,10 +196,11 @@ public class HelloController {
                         e.printStackTrace();
                     }
                 }
-                // You may also want to close 'connect' if it's not a shared connection across methods
             }
         }
     }
+
+
 
 
             /* REGISTER PAGE */
@@ -401,7 +402,7 @@ public class HelloController {
             LoginPage.setVisible(false);
             Registration.setVisible(false);
             new_passwordPage.setVisible(false);
-        } else if (event.getSource() == forBackBtn){
+        } else if (event.getSource() == BackBtn){
             LoginPage.setVisible(true);
             ForgotPasswordPage.setVisible(false);
         }
@@ -418,18 +419,18 @@ public class HelloController {
     }
 
 
-    public void showRegistrationPage () {
-        login_UserName.setText("");
-        login_Password.setText("");
-
-        LoginPage.setVisible(false);
-        Registration.setVisible(true);
-    }
-    public void showForgotPage () {
-        ForgotPasswordPage.setVisible(true);
-        LoginPage.setVisible(false);
-        // Registration.setVisible(false);
-    }
+//    public void showRegistrationPage () {
+//        login_UserName.setText("");
+//        login_Password.setText("");
+//
+//        LoginPage.setVisible(false);
+//        Registration.setVisible(true);
+//    }
+//    public void showForgotPage () {
+//        ForgotPasswordPage.setVisible(true);
+//        LoginPage.setVisible(false);
+//        // Registration.setVisible(false);
+//    }
 
     public void initialize () {
         questions();
