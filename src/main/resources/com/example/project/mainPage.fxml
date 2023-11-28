@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#register" prefHeight="626.0" prefWidth="940.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HelloController">
+   <children>
+      <AnchorPane fx:id="Registration" focusTraversable="true" layoutX="347.0" layoutY="37.0" prefHeight="552.0" prefWidth="530.0" styleClass="login-page" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="37.39999999999998" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="63.39999999999998" AnchorPane.topAnchor="37.0">
+         <children>
+            <Label layoutX="181.0" layoutY="78.0" text="Registration" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_passwordText1" layoutX="410.0" layoutY="224.0" prefHeight="38.0" prefWidth="259.0" styleClass="test-field" visible="false" />
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" layoutX="233.0" layoutY="69.0" size="64" text="" />
+            <Label layoutX="162.0" layoutY="115.0" text="User Name" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reg_FirstName" layoutX="160.0" layoutY="135.0" prefHeight="34.0" prefWidth="233.0" promptText="Username" />
+            <TextField fx:id="reg_number" layoutX="159.0" layoutY="195.0" prefHeight="34.0" prefWidth="234.0" promptText="number" />
+            <TextField fx:id="reg_Password" layoutX="157.0" layoutY="256.0" prefHeight="34.0" prefWidth="234.0" promptText="Password" />
+            <Label layoutX="162.0" layoutY="177.0" text="Phone Number" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" layoutX="131.0" layoutY="160.0" size="22" />
+            <Label layoutX="157.0" layoutY="235.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="126.0" layoutY="281.0" size="22" />
+            <ComboBox fx:id="reg_Qus" layoutX="157.0" layoutY="307.0" onAction="#questions" prefHeight="34.0" prefWidth="233.0" promptText="Question" />
+            <TextField fx:id="reg_Ans" layoutX="157.0" layoutY="374.0" prefHeight="34.0" prefWidth="233.0" promptText="Answer" />
+            <Label layoutX="159.0" layoutY="352.0" text="Answer" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="signUp" layoutX="205.0" layoutY="441.0" mnemonicParsing="false" onAction="#register" prefHeight="46.0" prefWidth="146.0" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="172.0" layoutY="502.0" text="Already have an account?" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="link_kogin" layoutX="334.0" layoutY="492.0" onAction="#switchFrom" text="Login">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Hyperlink>
+            <FontAwesomeIconView fill="WHITE" glyphName="PHONE" layoutX="131.0" layoutY="220.0" size="24" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="LoginPage" focusTraversable="true" layoutX="282.0" layoutY="101.0" prefHeight="434.0" prefWidth="634.0" styleClass="loginpage" stylesheets="@../../../css/style.css">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="174.0" layoutX="104.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/new-removebg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="352.0" layoutY="36.0" text="Welcome Back!" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="352.0" layoutY="75.0" text="We're so excited to see you again!" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="338.0" layoutY="125.0" text="ENTER USERNAME*" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_UserName" layoutX="337.0" layoutY="146.0" prefHeight="38.0" prefWidth="259.0" promptText="Username" styleClass="test-field">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="337.0" layoutY="201.0" text="PASSWORD" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_passwordText" layoutX="337.0" layoutY="222.0" prefHeight="38.0" prefWidth="259.0" styleClass="test-field" />
+            <PasswordField fx:id="login_Password" layoutX="337.0" layoutY="222.0" prefHeight="38.0" prefWidth="259.0" promptText="Password" styleClass="test-field">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </PasswordField>
+            <CheckBox fx:id="login_ShowPassword" layoutX="337.0" layoutY="274.0" mnemonicParsing="false" onAction="#showPass" text="Show password" textFill="WHITE" />
+            <Hyperlink fx:id="login_ForgotPass" layoutX="481.0" layoutY="271.0" onAction="#showForgotPage" text="Forgot password?" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+            <Button fx:id="login_Button" layoutX="398.0" layoutY="321.0" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="126.0" text="Log In ">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="344.0" layoutY="387.0" text="Create new Account?" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="register" layoutX="468.0" layoutY="378.0" onAction="#switchFrom" text="Register">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Hyperlink>
+            <Button layoutX="281.0" layoutY="276.0" mnemonicParsing="false" styleClass="cancel-button" textFill="RED">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+            <Label layoutX="93.0" layoutY="236.0" text="Team Angry Man's" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <rotationAxis>
+            <Point3D z="2.0" />
+         </rotationAxis>
+      </AnchorPane>
+      <AnchorPane fx:id="ForgotPasswordPage" focusTraversable="true" layoutX="450.0" layoutY="26.0" prefHeight="568.0" prefWidth="403.0" styleClass="login-page" stylesheets="@../../../css/style.css" visible="false" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <Label layoutX="92.0" layoutY="91.0" text="Forgot Password" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_passwordText11" layoutX="410.0" layoutY="224.0" prefHeight="38.0" prefWidth="259.0" styleClass="test-field" visible="false" />
+            <Label layoutX="110.0" layoutY="154.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="for_FirstName" layoutX="109.0" layoutY="174.0" prefHeight="34.0" prefWidth="216.0" promptText="Username" styleClass="test-field" />
+            <TextField fx:id="for_phone" layoutX="110.0" layoutY="240.0" prefHeight="38.0" prefWidth="212.0" promptText="number" styleClass="test-field" />
+            <Label layoutX="123.0" layoutY="220.0" text="Phone number" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" layoutX="79.0" layoutY="199.0" size="22" />
+            <ComboBox fx:id="for_Qus" layoutX="109.0" layoutY="293.0" onAction="#forgotListQus" prefHeight="34.0" prefWidth="216.0" promptText="Question" />
+            <TextField fx:id="for_Ans" layoutX="109.0" layoutY="357.0" prefHeight="34.0" prefWidth="216.0" promptText="Answer" styleClass="test-field" />
+            <Label layoutX="110.0" layoutY="335.0" text="Answer" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="forBackBtn" layoutX="145.0" layoutY="434.0" mnemonicParsing="false" onAction="#forgotPass" prefHeight="42.0" prefWidth="124.0" text="Next" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="187.0" layoutY="81.0" size="70" />
+            <FontAwesomeIconView fill="WHITE" glyphName="PHONE" layoutX="79.0" layoutY="267.0" size="22" />
+            <Button fx:id="forBackBtn" layoutX="149.0" layoutY="495.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="42.0" prefWidth="120.0" text="Back">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="new_passwordPage" focusTraversable="true" layoutX="485.0" layoutY="83.0" prefHeight="486.0" prefWidth="393.0" styleClass="login-page" stylesheets="@../../../css/style.css" visible="false" AnchorPane.leftAnchor="485.0" AnchorPane.rightAnchor="63.0">
+         <children>
+            <Label layoutX="82.0" layoutY="91.0" text="Forgot Password" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_passwordText111" layoutX="410.0" layoutY="224.0" prefHeight="38.0" prefWidth="259.0" styleClass="test-field" visible="false" />
+            <Label layoutX="102.0" layoutY="173.0" text="New Password" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_password" layoutX="95.0" layoutY="193.0" prefHeight="34.0" prefWidth="216.0" promptText="Password" styleClass="test-field" />
+            <TextField fx:id="new_coPassword" layoutX="96.0" layoutY="259.0" prefHeight="38.0" prefWidth="212.0" promptText="number" styleClass="test-field" />
+            <Label layoutX="100.0" layoutY="237.0" text="Confirm password" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="65.0" layoutY="217.0" size="22" />
+            <Button fx:id="nextBtn1" layoutX="123.0" layoutY="340.0" mnemonicParsing="false" onAction="#changePass" prefHeight="46.0" prefWidth="146.0" text="Next" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="174.0" layoutY="81.0" size="70" />
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <opaqueInsets>
+      <Insets top="0.8" />
+   </opaqueInsets>
+</AnchorPane>

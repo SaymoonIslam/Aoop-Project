@@ -1,0 +1,122 @@
+
+.root {
+    -fx-background-image: url('../image/new.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.login-page-bg{
+    -fx-background-color: linear-gradient(to bottom, #00ff00, #000000);
+
+}
+
+.regis-page{
+-fx-background-color:#2b2b2b;
+-fx-background-radius: 10;/*border shape*/
+-fx-effect: drop shadow(gaussian, rgba(0, 0, 0, 0.9), 10, 0, 0, 0);
+}
+
+.loginpage {
+    -fx-background-color: transparent; /* Set to transparent to allow the StackPane underneath to be visible */
+    -fx-background-radius: 10;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 66), 20, 0, 0, 0);
+}
+
+.loginpage .blur-background {
+    -fx-background-color: #363636;
+}
+
+
+.test-field {
+    -fx-background-color: transparent;
+    -fx-border-color:#fff;
+     -fx-border-radius:10;
+    -fx-text-fill: white;
+    -fx-cursor: text;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+}
+.test-field:hover {
+    -fx-border-color: #00ff00;
+}
+.hyperlink{
+-fx-text-fill:white;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-border-radius: 45;
+    -fx-background-radius:45;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+/*Home page button*/
+
+.button-home-page {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-border-radius: 45;
+    -fx-background-radius:45;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+/* Hovered button style */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-text-fill: white;
+}
+.cancel-button {
+    -fx-background-color: transparent;
+    -fx-border-color:transparent ;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+
+}
+.cancel-button:hover {
+
+    -fx-border-color:#ef0808;
+
+}
+/* Hovered button style */
+.cancel-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff9900, #ff6600);
+    -fx-text-fill: white;
+}
+
+
+
+/* Apply the blurred black background to the AnchorPane */
+.anchor-pane{
+    -fx-background-color: #514275;
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0);
+    -fx-background-radius: 50;
+     -fx-border-radius: 50;
+     -fx-border-color: #514275;
+      -fx-border-width: 2;
+}
+
+.course-bg{
+-fx-background-color: #fff;
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0);
+    -fx-background-radius: 10;
+     -fx-border-radius: 10;
+     -fx-border-color: #fff;
+      -fx-border-width: 1;
+}
+
+.home-page-background{
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #dcf7f4, #fff, #dcf7f4);
+    -fx-background-insets: 0, 1;
+}
+
+
+}
